@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <ion-button id="logout" (click)="logout()" size="medium">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="main-info">
+    <div>
+      <h1>Hi, I'm {{getName()}}</h1>
+      <h4>Joined in 2019</h4>
+
+      <ion-icon name="thumbs-up"></ion-icon>
+      0 reviews received
+      <br>
+      <ion-icon name="calendar"></ion-icon>
+      0 bookings made
+    </div>
+
+    <ion-avatar slot="start">
+      <img src="https://www.rd.com/wp-content/uploads/2018/02/33_Adorable-Puppy-Pictures-that-Will-Make-You-Melt_696648019_michaelheim-760x506.jpg">
+    </ion-avatar>
+  </div>
+
+  <div id="about">
+    <h3>About</h3>
+    <b>Email:</b> {{getEmail()}}
+  </div>
+
+  <div id="reviews">
+    <h3>0 reviews</h3>
+
+    <h5>No reviews yet.</h5>
+  </div>
+</ion-content>

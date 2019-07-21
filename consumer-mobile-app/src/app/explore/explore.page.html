@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Explore</ion-title>
+    <ion-button id="logout" (click)="logout()" size="medium">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col>
+
+      <ion-row *ngFor="let listing of getListings()">
+        <img src="https://media.timeout.com/images/104991899/image.jpg">
+        <br>
+        <b>{{listing.getTitle()}}</b>
+        {{listing.getLocation()}}
+        <ion-button (click)="navToListingDetails(listing)" size="medium" expand="block">View listing details</ion-button>
+      </ion-row>
+
+    </ion-col>
+  </ion-grid>
+</ion-content>

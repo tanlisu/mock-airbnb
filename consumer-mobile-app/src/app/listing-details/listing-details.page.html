@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listing details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="navToExplore()"></ion-back-button>
+    </ion-buttons>
+    <ion-button id="logout" (click)="logout()" size="medium">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <img src="https://media.timeout.com/images/104991899/image.jpg">
+    <b>{{this.listing.getTitle()}}</b><br>
+    {{this.listing.getLocation()}}<br>
+    {{this.listing.getNumberOfPeople()}} guests<br>
+    ${{this.listing.getPricePerNight()}} per night
+  </div>
+  <div>
+    {{this.listing.getDescription()}}
+  </div>
+  <ion-button (click)="book()" size="large" expand="block">Book now</ion-button>
+</ion-content>
