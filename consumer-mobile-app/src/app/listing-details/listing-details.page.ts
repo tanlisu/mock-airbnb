@@ -9,16 +9,13 @@ import { Listing } from '../models/listing';
   styleUrls: ['./listing-details.page.scss'],
 })
 export class ListingDetailsPage implements OnInit {
-
-  private storedIndex: number;
-  private listing: Listing;
+  public listing: Listing;
 
   constructor(
     private navCtrl: NavController,
     private listingService: ListingService)
   {
-    this.storedIndex = this.listingService.getStoredIndex();
-    this.listing = this.listingService.getListings()[this.storedIndex];
+    this.listing = this.listingService.getCurrentListing();
   }
 
   ngOnInit() {
@@ -33,7 +30,7 @@ export class ListingDetailsPage implements OnInit {
   }
 
   book() {
-    
+    this.navCtrl.navigateForward("book-now");
   }
 
 }

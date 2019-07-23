@@ -3,7 +3,6 @@ import { NavController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { AuthenticationService, ResponseObject } from '../services/auth.service';
 import { UserService } from '../services/user.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +18,6 @@ export class LoginPage implements OnInit {
     private alertController: AlertController,
     private authenticationService: AuthenticationService,
     private userService: UserService,
-    private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -31,6 +29,7 @@ export class LoginPage implements OnInit {
       if (response.success) {
         this.authenticationService.setToken(response.data);
         this.userService.setCurrentUser(response.user[0].name, response.user[0].surname, response.user[0].email, response.user[0].password);
+        this.userService.setCurrentUserId(response.user[0].id);
         this.navCtrl.navigateForward("tabs/tabs/explore");
       }
       else {

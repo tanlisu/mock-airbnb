@@ -1,6 +1,6 @@
 export class Listing {
-    private id;
-    private hostId;
+    private id: number;
+    private hostId: number;
     public title: string;
     public location: string;
     public description: string;
@@ -13,6 +13,14 @@ export class Listing {
         this.description = description;
         this.numberOfPeople = numberOfPeople;
         this.pricePerNight = pricePerNight;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    getHostId() {
+        return this.hostId;
     }
 
     getTitle() {
@@ -35,8 +43,12 @@ export class Listing {
         return this.pricePerNight;
     }
 
-    getHostId() {
-        return this.hostId;
+    setId(id: number) {
+        this.id = id;
+    }
+
+    setHostId(hostId: number) {
+        this.hostId = hostId;
     }
 
     setTitle(title: string) {
@@ -57,10 +69,6 @@ export class Listing {
 
     setPricePerNight(pricePerNight: string) {
         this.pricePerNight = pricePerNight;
-    }
-
-    setHostId(url: string) {
-        this.hostId = url;
     }
 
 }

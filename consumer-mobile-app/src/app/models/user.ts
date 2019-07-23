@@ -1,5 +1,5 @@
 export class User {
-    private id;
+    private id: number;
     private role: string = 'guest';
     public name: string;
     public surname: string;
@@ -11,6 +11,10 @@ export class User {
         this.surname = surname;
         this.email = email;
         this.password = password;
+    }
+
+    getId() {
+        return this.id;
     }
 
     getName() {
@@ -27,6 +31,10 @@ export class User {
 
     getPassword() {
         return this.password;
+    }
+
+    setId(id: number) {
+        this.id = id;
     }
 
     setName(name: string) {

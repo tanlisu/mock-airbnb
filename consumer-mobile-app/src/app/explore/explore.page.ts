@@ -9,11 +9,14 @@ import { ListingService } from  '../services/listing.service';
   styleUrls: ['./explore.page.scss'],
 })
 export class ExplorePage implements OnInit {
+  listings: Listing[] = [];
 
   constructor(
     private navCtrl: NavController,
     private listingService: ListingService)
-  { }
+  {
+    this.listings = this.getListings();
+   }
 
   ngOnInit() {
   }
@@ -23,12 +26,32 @@ export class ExplorePage implements OnInit {
   }
 
   navToListingDetails(listing: Listing) {
-    this.listingService.setStoredIndex(this.listingService.getListingIndex(listing));
+    this.listingService.setCurrentListing(listing);
     this.navCtrl.navigateForward("listing-details");
   }
 
   getListings() {
     return this.listingService.getListings();
+  }
+
+  getTitle() {
+    return this.listingService.getTitle();
+  }
+
+  getLocation() {
+    return this.listingService.getLocation();
+  }
+
+  getDescription() {
+    return this.listingService.getDescription();
+  }
+
+  getNumberOfPeople() {
+    return this.listingService.getNumberOfPeople();
+  }
+
+  getPricePerNight() {
+    return this.listingService.getPricePerNight();
   }
 
 }

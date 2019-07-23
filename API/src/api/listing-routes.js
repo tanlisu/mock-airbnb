@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 // get by host id
 router.get("/:hostId", (req, res) => {
     // asynchronous function call structure 
-    listingServer.getListingByID(req.params.hostId).then(listing => {
+    listingServer.getListingByHostID(req.params.hostId).then(listing => {
         res.json(listing);
     }).catch(err => {
         res.json(err);
