@@ -24,6 +24,7 @@ export class ListingService {
 
   // gets the listings from the database and stores them
   setListingsFromDB() {
+    this.listings = [];
     this.http.get('http://localhost:5000/listings').subscribe((response) => {
       console.log(response);
       for (let listing of Object.values(response)) {

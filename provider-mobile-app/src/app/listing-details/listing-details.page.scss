@@ -1,0 +1,20 @@
+$grey-color: rgb(65, 63, 63);
+
+ion-button {
+    font-weight: 300;
+    margin: 30px;
+}
+
+div {
+    background-color: white;
+    color: $grey-color;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#logout {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    margin: 10px;
+}

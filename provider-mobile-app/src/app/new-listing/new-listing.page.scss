@@ -1,0 +1,50 @@
+$white-color: #fff;
+$blue-color: #5a92f1;
+
+ion-grid {
+    width: 100%;
+    height: 100%;
+    background: $blue-color;
+}
+
+ion-row {
+    height: 100%;
+    justify-content: center;
+}
+
+ion-col {
+    background: $white-color;
+    align-self: center;
+}
+
+ion-label {
+    width: 100%;
+}
+
+ion-input {
+    font-weight: 300;
+}
+
+ion-textarea {
+    text-align: left;
+    font-weight: 300;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    padding: 5px;
+    height: 80px;
+}
+
+ion-button {
+    font-weight: 300;
+}
+
+div {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 240px) and (max-width: 768px) {
+    ion-grid {
+        background: $white-color;
+    }
+}

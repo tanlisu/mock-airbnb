@@ -1,0 +1,28 @@
+.table-row{
+    cursor: pointer;
+}
+
+.table-row:hover{
+    background-color: rgba(0, 123, 255, 0.5);
+
+}
+
+button {
+    align-self: center;
+    margin: 5px;
+}
+
+label {
+    margin-right: 5px;
+}
+
+#form {
+    padding: 10px;
+    margin: 20px;
+    align-self: center;
+    width: 100%;
+}
+
+#add-sp-button {
+    margin: 20px;
+}

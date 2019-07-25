@@ -40,4 +40,23 @@ export class Booking {
         this.id = id;
     }
 
+    setListingId(listingId: number) {
+        this.listingId = listingId;
+    }
+
+    setGuestId(guestId: number) {
+        this.guestId = guestId;
+    }
+
+    setStatus(status: string) {
+        this.status = status;
+    }
+
+    setDateStart(dateStart: string) {
+        this.dateStart = dateStart;
+    }
+
+    setDateEnd(dateEnd: string) {
+        this.dateEnd = dateEnd;
+    }
 }

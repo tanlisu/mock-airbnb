@@ -24,11 +24,12 @@ Listing.getAllListings = (result) => {
 
 Listing.getListingByID = (id, result) => {
     mysqlConn.query("SELECT * FROM listing where id = ?", id, (err, res) => {
+        console.log(res);
         if (err) {
             console.log("error: ", err);
             result(null, err);
         } else {
-            console.log(res);
+            //console.log(res);
             result(res, null);
         }
     })
@@ -47,11 +48,13 @@ Listing.getListingByTitle = (title, result) => {
 };
 
 Listing.getListingByHostID = (hostId, result) => {
+    console.log("inside getListingByHostId")
     mysqlConn.query("SELECT * FROM listing where hostId = ?", hostId, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);
         } else {
+            console.log("we got stuff");
             console.log(res);
             result(res, null);
         }
@@ -59,7 +62,7 @@ Listing.getListingByHostID = (hostId, result) => {
 };
 
 Listing.addListing = (newListing, result) => {
-    mysqlConn.query("INSERT INTO listing set ?", newListing, (err, res) => {
+    mysqlConn.query("INSERT INTO listing SET ?", newListing, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -76,7 +79,7 @@ Listing.updateListing = (id, listing, result) => {
             console.log("error: ", err);
             result(null, err);
         } else {
-            console.log(res);
+            //console.log(res);
             result(res, null);
         }
     });

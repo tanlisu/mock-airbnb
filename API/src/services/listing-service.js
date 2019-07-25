@@ -21,7 +21,11 @@ module.exports = class ListingService {
 
     getListingByHostID(id) {
         return new Promise((resolve, reject) => {
+            console.log("getListingByHostID inside")
+            console.log(id);
             listings.getListingByHostID(id, (res, err) => {
+                console.log("after getListingByHostID has run");
+                console.log(res);
                 if (err) {
                     reject(err);
                 }
@@ -43,6 +47,7 @@ module.exports = class ListingService {
                     if (err) {
                         reject(err);
                     }
+                    console.log(res);
                     if (res.length == 0) { // add listing
                         listings.addListing(listingInfo, (res, err) => {
                             if (err) {
@@ -65,6 +70,7 @@ module.exports = class ListingService {
         return new Promise((resolve, reject) => {
             // check if there exists a listing with this id
             listings.getListingByID(listingInfo.id, (res, err) => {
+
                 if (err) {
                     reject(err);
                 }
@@ -72,12 +78,12 @@ module.exports = class ListingService {
                     reject("Listing does not exist");
                 }
                 else { // update listing
+
                     listings.updateListing(listingInfo.id, listingInfo, (res, err) => {
                         if (err) {
                             reject(err);
                         }
                         else {
-                            console.log(res);
                             resolve(res);
                         }
                     });
