@@ -18,9 +18,4 @@ This project is a full stack mobile app inspired by Airbnb. The app allows guest
 ``ionic serve``
 
 ## Screenshots <a name = "screenshots"></a>
-![alt text](assets/login.png)
-![alt text](assets/register.png)
-![alt text](assets/profile.png)
-![alt text](assets/listings.png)
-![alt text](assets/listing-details.png)
-![alt text](assets/book-now.png)
+![alt text](assets/mock-airbnb.png)
