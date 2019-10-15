@@ -21,7 +21,7 @@ This project is a full stack mobile app inspired by Airbnb. The app allows guest
 ## How to Run <a name = "how_to_run"></a>
 - Run the API.
 ``npm run dev``
-- Run the front-end.
+- In a separate terminal tab, run the front-end.
 ``ionic serve``
 
 ## Screenshots <a name = "screenshots"></a>
