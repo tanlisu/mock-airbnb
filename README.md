@@ -15,7 +15,10 @@ This project is a full stack mobile app inspired by Airbnb. The app allows guest
 - Install Ionic.
 ``npm install -g ionic``
 - Create an SQL database with sample data using MySQLWorkbench. Configure it as follows:
+
 ![alt text](assets/sample-database.png)
+
+## How to Run <a name = "how_to_run"></a>
 - Run the API.
 ``npm run dev``
 - Run the front-end.
